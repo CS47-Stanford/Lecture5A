@@ -6,10 +6,43 @@ import { Images, Colors, Metrics } from '../Themes'
 
 export default class SampleSettingsScreen extends React.Component {
 
+  static navigationOptions = ({ navigation }) => {
+    const { params = {} } = navigation.state;
+
+    const tabBarOptions = {
+      tabBarLabel: '2nd!',
+      tabBarIcon: ({ tintColor }) => (
+        <MaterialIcons
+          name='settings'
+          color={tintColor}
+          size={Metrics.icons.small}
+        />
+      )
+    }
+
+    const result = {
+      ...tabBarOptions
+    }
+
+    //Exactly equals
+
+    // const result = {
+    //   tabBarLabel: '1st!',
+    // tabBarIcon: ({ tintColor }) => (
+    //   <MaterialIcons
+    //     name='mood'
+    //     color={tintColor}
+    //     size={Metrics.icons.small}
+    //   />
+    // )
+    // }
+
+    return result;
+  }
   render() {
 
     return (
-      <View style={[ styles.container, { backgroundColor: color } ]}>
+      <View style={[ styles.container]}>
         <Text style={styles.text}>{"Hello this is settings"}</Text>
         <Text style={styles.text}>{"Maybe we want count?"}</Text>
       </View>

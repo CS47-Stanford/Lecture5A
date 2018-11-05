@@ -3,6 +3,9 @@ import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
 import { Images, Metrics } from '../Themes'
 
+import TabNav from '../Navigation/TabNavigation';
+import StackNav from '../Navigation/StackNavigation';
+import DrawerNav from '../Navigation/DrawerNavigation';
 
 const NavigatorTypes = Object.freeze({"stack":1, "tab":2, "drawer":3})
 
@@ -19,11 +22,11 @@ export default class PickerScreen extends React.Component {
   navigationForType = (type) => {
     switch (type) {
       case NavigatorTypes.stack:
-        return null
+        return <StackNav />
       case NavigatorTypes.tab:
-        return null
+        return <TabNav />
       case NavigatorTypes.drawer:
-        return null
+        return <DrawerNav />
     }
   }
 

@@ -8,9 +8,9 @@ export default class SampleDrawerScreen extends React.Component {
 
   render() {
     return (
-      <View style={[ styles.container, { backgroundColor: color } ]}>
-        <Text style={styles.text}>{text}</Text>
-        <Text style={styles.text}>{count}</Text>
+      <View style={[ styles.container ]}>
+        <Text style={styles.text}>{"text"}</Text>
+        <Text style={styles.text}>{"count"}</Text>
       </View>
     );
 
